@@ -115,7 +115,7 @@ jobs:
 
     - name: Deploy Webapp to ${{ steps.deploy.outputs.webAppName }}
       id: deploy-web-app
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v3
       with:
         app-name: ${{ steps.deploy.outputs.webAppName }}
         images: ${{ steps.deploy.outputs.acrLoginServer }}/learning/tododockerwebapp:${{ github.sha }}
